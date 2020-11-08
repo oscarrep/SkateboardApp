@@ -97,10 +97,10 @@ class _ProfilePic extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(40.0),
+    return Container(
+      //padding: const EdgeInsets.all(40.0),
       child: Container(
-        alignment: Alignment(-1 ,0.55),
+        alignment: Alignment(-0.75 ,0.45),
         child: Container(
           width: 70,
           height: 70,
@@ -152,10 +152,9 @@ class _Like extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(40.0),
+    return Container(
       child: Container(
-        alignment: Alignment(1 , 0.65),
+        alignment: Alignment(0.75 , 0.55),
         child: Container(
           width: 30,
           height: 30,
@@ -180,10 +179,9 @@ class _Home extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(40.0),
+    return Container(
       child: Container(
-        alignment: Alignment(-1 , 1.14),
+        alignment: Alignment(-0.75 , 0.98),
         child: Container(
           width: 30,
           height: 30,
@@ -208,10 +206,9 @@ class _Search extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(40.0),
+    return Container(
       child: Container(
-        alignment: Alignment(-0.40 , 1.14),
+        alignment: Alignment(-0.25 , 0.98),
         child: Container(
           width: 30,
           height: 30,
@@ -236,10 +233,9 @@ class _Photo extends StatelessWidget {
  
  @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(40.0),
+    return Container(
       child: Container(
-        alignment: Alignment(0.40 , 1.14),
+        alignment: Alignment(0.25 , 0.98),
         child: Container(
           width: 30,
           height: 30,
@@ -264,10 +260,9 @@ class _Messages extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(40.0),
+    return Container(
       child: Container(
-        alignment: Alignment(1 , 1.14),
+        alignment: Alignment(0.75 , 0.98),
         child: Container(
           width: 30,
           height: 30,
@@ -292,10 +287,9 @@ class _Back extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(40.0),
+    return Container(
       child: Container(
-        alignment: Alignment(-1.2 , -1),
+        alignment: Alignment(-0.9 , -0.85),
         child: Container(
           width: 30,
           height: 30,
@@ -320,10 +314,9 @@ class _Options extends StatelessWidget {
  
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(40.0),
+    return Container(
       child: Container(
-        alignment: Alignment(1.2 , -1),
+        alignment: Alignment(0.9 , -0.85),
         child: Container(
           width: 30,
           height: 30,
