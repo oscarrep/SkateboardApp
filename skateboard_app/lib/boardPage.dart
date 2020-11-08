@@ -78,7 +78,8 @@ class _Text extends StatelessWidget {
              children: [
                Text('Hey guys, this is one of the photos we took '
                     'on the last trip with the Rip Curl team, '
-                    'we had a blast. Looking forward to doing more things like this',
+                    'we had a blast. Looking forward for more '
+                    'opportunities like this one.',
                     style: TextStyle(
                       color: Colors.blueGrey,
                       fontSize: 11,
