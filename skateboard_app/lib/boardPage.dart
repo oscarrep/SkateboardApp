@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:skateboard_app/board.dart';
+//import 'package:skateboard_app/customs.dart';
 
 class BoardPage extends StatelessWidget{
   @override
@@ -13,7 +14,7 @@ class BoardPage extends StatelessWidget{
           height: MediaQuery.of(context).size.height,
           fit: BoxFit.fitHeight
           ),
-          _Header(),
+          _Text(),
         ], // children
       ),
     );
@@ -22,49 +23,33 @@ class BoardPage extends StatelessWidget{
 
 // --------------------------------------------------------------- HEADER -------------------------------
 
-class _Header extends StatelessWidget {
-  const _Header({
-    Key key,
-  }) : super(key: key);
+class _Text extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Column(
-          children: <Widget>[
-            AspectRatio(
-              aspectRatio: 2,
-              child: Image.asset(
-                board.boardPNG,
-              ),
-            ),
-            Expanded(
-            child: Center (
-                child: Text(
-                  board.itemName,
-                  style: TextStyle(
-                  fontSize: 20,
-              ),
-            ),
-            ),
-            ),
-            Expanded(
-              child: Padding(
-                padding: EdgeInsets.all(20),
-                child: Text(
-                  board.description,
-                  style: TextStyle(
-                    fontSize: 13,
-                   color: Colors.grey,
-                 ),
-                ),
-              ),
-            ),
-          ],
+    return Align(
+    alignment: Alignment.bottomCenter,
+      child: Container(
+          height: MediaQuery.of(context).size.height*2/7,
+          decoration: BoxDecoration(
+            color: Colors.white,
+          ),
+         child: Padding(
+           padding: EdgeInsets.all(30),
+           child: Column(
+             mainAxisAlignment: MainAxisAlignment.spaceAround,
+             children: [
+               Text('Hey guys, this is one of the photos we took '
+                    'on the last trip with the Rip Curl team',
+                    style: TextStyle(
+                      color: Colors.blueGrey,
+                      fontSize: 13,
+                    ),
+                  )
+             ], // Children
+           )
+         ),
         ),
-      ],
     );
   }
 }
