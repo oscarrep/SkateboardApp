@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
+
+
 class BoardPage extends StatelessWidget{
+
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -33,7 +36,7 @@ class _Username extends StatelessWidget {
     return Container(
     alignment: Alignment(-0.85 , 1.05),
       child: Container(
-          height: MediaQuery.of(context).size.height*2/7,
+          height: MediaQuery.of(context).size.height * 0.29,
          child: Padding(
            padding: EdgeInsets.all(30),
            child: Column(
@@ -61,7 +64,7 @@ class _Text extends StatelessWidget {
     return Align(
     alignment: Alignment.bottomCenter,
       child: Container(
-          height: MediaQuery.of(context).size.height*2/7,
+          height: MediaQuery.of(context).size.height * 0.28,
           decoration: BoxDecoration(
             color: Colors.white,
           ),
@@ -87,11 +90,12 @@ class _Text extends StatelessWidget {
 }
 
 class _ProfilePic extends StatelessWidget {
+
   const _ProfilePic({
     Key key,
   }):super(key: key);
-  @override
 
+  @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(40.0),
@@ -120,7 +124,7 @@ class _BotButtons extends StatelessWidget {
     return Align(
     alignment: Alignment.bottomCenter,
       child: Container(
-          height: MediaQuery.of(context).size.height*0.07,
+          height: MediaQuery.of(context).size.height * 0.07,
           decoration: BoxDecoration(
             color:Theme.of(context).primaryColor,
             borderRadius: BorderRadius.only(
@@ -141,11 +145,12 @@ class _BotButtons extends StatelessWidget {
 }
 
 class _Like extends StatelessWidget {
+
   const _Like({
     Key key,
   }):super(key: key);
+  
   @override
-
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(40.0),
@@ -155,8 +160,8 @@ class _Like extends StatelessWidget {
           width: 30,
           height: 30,
           child: FloatingActionButton(
-            backgroundColor: Colors.white,
             mini: true,
+            backgroundColor: Colors.white,
             child: Icon(Icons.favorite_border_rounded,
                 color: Theme.of(context).primaryColor, size: 20),
             onPressed: (){},
@@ -168,11 +173,12 @@ class _Like extends StatelessWidget {
 }
 
 class _Home extends StatelessWidget {
+  
   const _Home({
     Key key,
   }):super(key: key);
+  
   @override
-
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(40.0),
@@ -182,8 +188,8 @@ class _Home extends StatelessWidget {
           width: 30,
           height: 30,
           child: FloatingActionButton(
-            backgroundColor: Colors.white,
             mini: true,
+            backgroundColor: Colors.white,
             child: Icon(Icons.home,
                 color: Theme.of(context).primaryColor, size: 20),
             onPressed: (){},
@@ -195,11 +201,12 @@ class _Home extends StatelessWidget {
 }
 
 class _Search extends StatelessWidget {
+  
   const _Search({
     Key key,
   }):super(key: key);
+  
   @override
-
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(40.0),
@@ -209,8 +216,8 @@ class _Search extends StatelessWidget {
           width: 30,
           height: 30,
           child: FloatingActionButton(
-            backgroundColor: Colors.white,
             mini: true,
+            backgroundColor: Colors.white,
             child: Icon(Icons.search,
                 color: Theme.of(context).primaryColor, size: 20),
             onPressed: (){},
@@ -222,11 +229,12 @@ class _Search extends StatelessWidget {
 }
 
 class _Photo extends StatelessWidget {
+ 
   const _Photo({
     Key key,
   }):super(key: key);
-  @override
-
+ 
+ @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(40.0),
@@ -236,8 +244,8 @@ class _Photo extends StatelessWidget {
           width: 30,
           height: 30,
           child: FloatingActionButton(
-            backgroundColor: Colors.white,
             mini: true,
+            backgroundColor: Colors.white,
             child: Icon(Icons.camera_alt,
                 color: Theme.of(context).primaryColor, size: 20),
             onPressed: (){},
@@ -249,11 +257,12 @@ class _Photo extends StatelessWidget {
 }
 
 class _Messages extends StatelessWidget {
+  
   const _Messages({
     Key key,
   }):super(key: key);
+  
   @override
-
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(40.0),
@@ -263,8 +272,8 @@ class _Messages extends StatelessWidget {
           width: 30,
           height: 30,
           child: FloatingActionButton(
-            backgroundColor: Colors.white,
             mini: true,
+            backgroundColor: Colors.white,
             child: Icon(Icons.chat_bubble_rounded,
                 color: Theme.of(context).primaryColor, size: 20),
             onPressed: (){},
@@ -276,11 +285,12 @@ class _Messages extends StatelessWidget {
 }
 
 class _Back extends StatelessWidget {
+  
   const _Back({
     Key key,
   }):super(key: key);
+  
   @override
-
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(40.0),
@@ -290,8 +300,8 @@ class _Back extends StatelessWidget {
           width: 30,
           height: 30,
           child: FloatingActionButton(
-            backgroundColor: Colors.white,
             mini: true,
+            backgroundColor: Colors.white,
             child: Icon(Icons.arrow_back,
                 color: Theme.of(context).primaryColor, size: 20),
             onPressed: (){},
@@ -303,11 +313,12 @@ class _Back extends StatelessWidget {
 }
 
 class _Options extends StatelessWidget {
+ 
   const _Options({
     Key key,
   }):super(key: key);
+ 
   @override
-
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(40.0),
@@ -317,8 +328,8 @@ class _Options extends StatelessWidget {
           width: 30,
           height: 30,
           child: FloatingActionButton(
-            backgroundColor: Colors.white,
             mini: true,
+            backgroundColor: Colors.white,
             child: Icon(Icons.menu,
                 color: Theme.of(context).primaryColor, size: 20),
             onPressed: (){},
