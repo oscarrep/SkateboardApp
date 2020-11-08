@@ -92,10 +92,10 @@ class _Text extends StatelessWidget {
     return Align(
     alignment: Alignment.bottomCenter,
       child: Container(
+          height: MediaQuery.of(context).size.height * 0.28,
           decoration: BoxDecoration(
             color: Colors.white,
           ),
-          height: MediaQuery.of(context).size.height * 0.28,
          child: Padding(
            padding: EdgeInsets.all(30),
            child: Column(
@@ -109,6 +109,7 @@ class _Text extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.blueGrey,
                       fontSize: 10,
+                      fontWeight: FontWeight.w300,
                     ),
                   )
              ], // Children
@@ -127,7 +128,7 @@ class _Tag1 extends StatelessWidget {
       child: Container(
         alignment: Alignment(0.76,0.83),
         child: Container(
-          width: 35,
+          width: MediaQuery.of(context).size.width * 0.1,
           height: MediaQuery.of(context).size.height * 0.04,
           child: FloatingActionButton.extended(
             backgroundColor: Theme.of(context).primaryColor,
@@ -156,7 +157,7 @@ class _Tag2 extends StatelessWidget {
       child: Container(
         alignment: Alignment(0.50,0.83),
         child: Container(
-          width: 35,
+          width: MediaQuery.of(context).size.width * 0.1,
           height: MediaQuery.of(context).size.height * 0.04,
           child: FloatingActionButton.extended(
             backgroundColor: Theme.of(context).primaryColor,
@@ -185,7 +186,7 @@ class _Tag3 extends StatelessWidget {
       child: Container(
         alignment: Alignment(0.20,0.83),
         child: Container(
-          width: 60,
+          width: MediaQuery.of(context).size.width * 0.15,
           height: MediaQuery.of(context).size.height * 0.04,
           child: FloatingActionButton.extended(
             backgroundColor: Theme.of(context).primaryColor,
@@ -245,8 +246,8 @@ class _BoxButtons extends StatelessWidget {
           decoration: BoxDecoration(
             color:Theme.of(context).primaryColor,
             borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(30),
-            topRight: Radius.circular(30),
+             topRight: Radius.circular(10),
+             topLeft: Radius.circular(10),
             ),
          ),
          height: MediaQuery.of(context).size.height * 0.07,
@@ -270,7 +271,6 @@ class _Like extends StatelessWidget {
           width: 30,
           height: 30,
           child: FloatingActionButton(
-            mini: true,
             elevation: 2,
             backgroundColor: Theme.of(context).primaryColor,
             child: Icon(
@@ -301,7 +301,6 @@ class _Home extends StatelessWidget {
           width: 30,
           height: 30,
           child: FloatingActionButton(
-            mini: true,
             backgroundColor: Colors.transparent,
             elevation: 0,
             child: Icon(
@@ -332,7 +331,6 @@ class _Search extends StatelessWidget {
           width: 30,
           height: 30,
           child: FloatingActionButton(
-            mini: true,
             backgroundColor: Colors.transparent,
             elevation: 0,
             child: Icon(
@@ -363,7 +361,6 @@ class _Photo extends StatelessWidget {
           width: 30,
           height: 30,
           child: FloatingActionButton(
-            mini: true,
             backgroundColor: Colors.transparent,
             elevation: 0,
             child: Icon(
@@ -394,7 +391,6 @@ class _Messages extends StatelessWidget {
           width: 30,
           height: 30,
           child: FloatingActionButton(
-            mini: true,
             backgroundColor: Colors.transparent,
             elevation: 0,
             child: Icon(
@@ -425,7 +421,6 @@ class _Back extends StatelessWidget {
           width: 30,
           height: 30,
           child: FloatingActionButton(
-            mini: true,
             backgroundColor: Colors.transparent,
             elevation:0,
             child: Icon(
@@ -456,7 +451,6 @@ class _Options extends StatelessWidget {
           width: 30,
           height: 30,
           child: FloatingActionButton(
-            mini: true,
             backgroundColor: Colors.transparent,
             elevation: 0,
             child: Icon(
