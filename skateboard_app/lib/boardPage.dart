@@ -160,9 +160,9 @@ class _Like extends StatelessWidget {
           height: 30,
           child: FloatingActionButton(
             mini: true,
-            backgroundColor: Colors.white,
-            child: Icon(Icons.favorite_border_rounded,
-                color: Theme.of(context).primaryColor, size: 20),
+            backgroundColor: Theme.of(context).primaryColor,
+            child: Icon(Icons.favorite_rounded,
+                color: Colors.white, size: 20),
             onPressed: (){},
           ),
         ),
