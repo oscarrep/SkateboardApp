@@ -37,7 +37,7 @@ class _Username extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-    alignment: Alignment(-0.85 , 1.05),
+    alignment: Alignment(-0.8 , 1.05),
       child: Container(
           height: MediaQuery.of(context).size.height * 0.29,
          child: Padding(
@@ -49,7 +49,7 @@ class _Username extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.blueGrey,
                       fontWeight: FontWeight.bold,
-                      fontSize: 13,
+                      fontSize: 10,
                     ),
                   )
              ], // Children
@@ -82,7 +82,7 @@ class _Text extends StatelessWidget {
                     'opportunities like this one.',
                     style: TextStyle(
                       color: Colors.blueGrey,
-                      fontSize: 11,
+                      fontSize: 10,
                     ),
                   )
              ], // Children
