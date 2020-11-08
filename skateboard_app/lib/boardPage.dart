@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+//import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 
 
 
@@ -33,15 +33,16 @@ class BoardPage extends StatelessWidget{
       ),*/
       body: Stack(
         children:[
-          Image.asset('assets/photojump.jpg',
-          fit: BoxFit.fitHeight
+          Image.asset(
+            'assets/photojump.jpg',
+            fit: BoxFit.fitHeight
           ),
           _Text(), 
           _Tag1(),
           _Tag2(),
           _Tag3(),
           _Username(),
-          _BotButtons(),
+          _BoxButtons(),
           _Like(),
           _ProfilePic(),
           _Home(),
@@ -68,7 +69,8 @@ class _Username extends StatelessWidget {
            padding: EdgeInsets.all(30),
            child: Column(
              children: [
-               Text('@itMe',
+               Text(
+                    '@itMe',
                     style: TextStyle(
                       color: Colors.blueGrey,
                       fontWeight: FontWeight.bold,
@@ -99,7 +101,8 @@ class _Text extends StatelessWidget {
            child: Column(
              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
              children: [
-               Text('Hey guys, this is one of the photos we took '
+               Text(
+                    'Hey guys, this is one of the photos we took '
                     'on the last trip with the Rip Curl team, '
                     'we had a blast. Looking forward for more '
                     'opportunities like this one.',
@@ -129,7 +132,8 @@ class _Tag1 extends StatelessWidget {
           child: FloatingActionButton.extended(
             backgroundColor: Theme.of(context).primaryColor,
             elevation: 0,
-            label: Text('Photo',
+            label: Text(
+                    'Photo',
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -157,7 +161,8 @@ class _Tag2 extends StatelessWidget {
           child: FloatingActionButton.extended(
             backgroundColor: Theme.of(context).primaryColor,
             elevation: 0,
-            label: Text('Skate',
+            label: Text(
+                    'Skate',
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -185,7 +190,8 @@ class _Tag3 extends StatelessWidget {
           child: FloatingActionButton.extended(
             backgroundColor: Theme.of(context).primaryColor,
             elevation: 0,
-            label: Text('Longboard',
+            label: Text(
+                    'Longboard',
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -209,7 +215,6 @@ class _ProfilePic extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      //padding: const EdgeInsets.all(40.0),
       child: Container(
         alignment: Alignment(-0.75 ,0.45),
         child: Container(
@@ -217,8 +222,8 @@ class _ProfilePic extends StatelessWidget {
           height: 70,
           child: FloatingActionButton(
             backgroundColor: Colors.white,
-            mini: true,
-            child: Icon(Icons.account_circle,
+            child: Icon(
+              Icons.account_circle,
                 color: Theme.of(context).primaryColor,
                 size: 70
                 ),
@@ -230,7 +235,7 @@ class _ProfilePic extends StatelessWidget {
   }
 }
 
-class _BotButtons extends StatelessWidget {
+class _BoxButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -268,7 +273,8 @@ class _Like extends StatelessWidget {
             mini: true,
             elevation: 2,
             backgroundColor: Theme.of(context).primaryColor,
-            child: Icon(Icons.favorite_rounded,
+            child: Icon(
+              Icons.favorite_rounded,
                 color: Colors.white,
                 size: 20
                 ),
@@ -298,7 +304,8 @@ class _Home extends StatelessWidget {
             mini: true,
             backgroundColor: Colors.transparent,
             elevation: 0,
-            child: Icon(Icons.home,
+            child: Icon(
+              Icons.home,
                 color: Colors.white,
                 size: 20
                 ),
@@ -328,7 +335,8 @@ class _Search extends StatelessWidget {
             mini: true,
             backgroundColor: Colors.transparent,
             elevation: 0,
-            child: Icon(Icons.search,
+            child: Icon(
+              Icons.search,
                 color: Colors.white,
                 size: 20
                 ),
@@ -358,7 +366,8 @@ class _Photo extends StatelessWidget {
             mini: true,
             backgroundColor: Colors.transparent,
             elevation: 0,
-            child: Icon(Icons.camera_alt,
+            child: Icon(
+              Icons.camera_alt,
                 color: Colors.white,
                 size: 20
                 ),
@@ -388,7 +397,8 @@ class _Messages extends StatelessWidget {
             mini: true,
             backgroundColor: Colors.transparent,
             elevation: 0,
-            child: Icon(Icons.comment,
+            child: Icon(
+              Icons.comment,
                 color: Colors.white,
                 size: 20
                 ),
@@ -418,7 +428,8 @@ class _Back extends StatelessWidget {
             mini: true,
             backgroundColor: Colors.transparent,
             elevation:0,
-            child: Icon(Icons.arrow_back,
+            child: Icon(
+              Icons.arrow_back,
                 color: Colors.white,
                 size: 20
                 ),
@@ -448,7 +459,8 @@ class _Options extends StatelessWidget {
             mini: true,
             backgroundColor: Colors.transparent,
             elevation: 0,
-            child: Icon(Icons.menu,
+            child: Icon(
+              Icons.menu,
                 color: Colors.white,
                 size: 20
                 ),
