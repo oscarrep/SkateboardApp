@@ -67,7 +67,6 @@ class _Username extends StatelessWidget {
          child: Padding(
            padding: EdgeInsets.all(30),
            child: Column(
-
              children: [
                Text('@itMe',
                     style: TextStyle(
@@ -220,7 +219,9 @@ class _ProfilePic extends StatelessWidget {
             backgroundColor: Colors.white,
             mini: true,
             child: Icon(Icons.account_circle,
-                color: Theme.of(context).primaryColor, size: 70),
+                color: Theme.of(context).primaryColor,
+                size: 70
+                ),
             onPressed: () {},
           ),
         ),
@@ -268,7 +269,9 @@ class _Like extends StatelessWidget {
             elevation: 2,
             backgroundColor: Theme.of(context).primaryColor,
             child: Icon(Icons.favorite_rounded,
-                color: Colors.white, size: 20),
+                color: Colors.white,
+                size: 20
+                ),
             onPressed: (){},
           ),
         ),
@@ -293,9 +296,12 @@ class _Home extends StatelessWidget {
           height: 30,
           child: FloatingActionButton(
             mini: true,
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.transparent,
+            elevation: 0,
             child: Icon(Icons.home,
-                color: Theme.of(context).primaryColor, size: 20),
+                color: Colors.white,
+                size: 20
+                ),
             onPressed: (){},
           ),
         ),
@@ -320,9 +326,12 @@ class _Search extends StatelessWidget {
           height: 30,
           child: FloatingActionButton(
             mini: true,
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.transparent,
+            elevation: 0,
             child: Icon(Icons.search,
-                color: Theme.of(context).primaryColor, size: 20),
+                color: Colors.white,
+                size: 20
+                ),
             onPressed: (){},
           ),
         ),
@@ -347,9 +356,12 @@ class _Photo extends StatelessWidget {
           height: 30,
           child: FloatingActionButton(
             mini: true,
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.transparent,
+            elevation: 0,
             child: Icon(Icons.camera_alt,
-                color: Theme.of(context).primaryColor, size: 20),
+                color: Colors.white,
+                size: 20
+                ),
             onPressed: (){},
           ),
         ),
@@ -374,9 +386,12 @@ class _Messages extends StatelessWidget {
           height: 30,
           child: FloatingActionButton(
             mini: true,
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.transparent,
+            elevation: 0,
             child: Icon(Icons.comment,
-                color: Theme.of(context).primaryColor, size: 20),
+                color: Colors.white,
+                size: 20
+                ),
             onPressed: (){},
           ),
         ),
@@ -401,9 +416,12 @@ class _Back extends StatelessWidget {
           height: 30,
           child: FloatingActionButton(
             mini: true,
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.transparent,
+            elevation:0,
             child: Icon(Icons.arrow_back,
-                color: Theme.of(context).primaryColor, size: 20),
+                color: Colors.white,
+                size: 20
+                ),
             onPressed: (){},
           ),
         ),
@@ -428,9 +446,12 @@ class _Options extends StatelessWidget {
           height: 30,
           child: FloatingActionButton(
             mini: true,
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.transparent,
+            elevation: 0,
             child: Icon(Icons.menu,
-                color: Theme.of(context).primaryColor, size: 20),
+                color: Colors.white,
+                size: 20
+                ),
             onPressed: (){},
           ),
         ),
