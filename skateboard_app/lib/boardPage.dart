@@ -17,6 +17,7 @@ class BoardPage extends StatelessWidget{
           ),
           _Text(),
           _ProfilePic(),
+          _Like(),
         ], // children
       ),
     );
@@ -76,6 +77,34 @@ class _ProfilePic extends StatelessWidget {
             mini: true,
             child: Icon(Icons.account_circle,
                 color: Theme.of(context).primaryColor, size: 70),
+            onPressed: () {},
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _Like extends StatelessWidget {
+  const _Like({
+    Key key,
+  }):super(key: key);
+  @override
+
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(40.0),
+      child: Container(
+        alignment: Alignment(1 , 0.65),
+        child: Container(
+          //alignment: Alignment.centerRight,
+          width: 30,
+          height: 30,
+          child: FloatingActionButton(
+            backgroundColor: Colors.white,
+            mini: true,
+            child: Icon(Icons.favorite_border_rounded,
+                color: Theme.of(context).primaryColor, size: 20),
             onPressed: () {},
           ),
         ),
