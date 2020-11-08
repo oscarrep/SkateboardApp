@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:skateboard_app/app.dart';
 import 'package:skateboard_app/board.dart';
 //import 'package:skateboard_app/customs.dart';
 
@@ -15,6 +16,7 @@ class BoardPage extends StatelessWidget{
           fit: BoxFit.fitHeight
           ),
           _Text(),
+          _ProfilePic(),
         ], // children
       ),
     );
@@ -50,6 +52,34 @@ class _Text extends StatelessWidget {
            )
          ),
         ),
+    );
+  }
+}
+
+class _ProfilePic extends StatelessWidget {
+  const _ProfilePic({
+    Key key,
+  }):super(key: key);
+  @override
+
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(40.0),
+      child: Container(
+        alignment: Alignment(-1 ,0.6),
+        child: Container(
+          //alignment: Alignment.centerRight,
+          width: 70,
+          height: 70,
+          child: FloatingActionButton(
+            backgroundColor: Colors.white,
+            mini: true,
+            child: Icon(Icons.account_circle,
+                color: Theme.of(context).primaryColor, size: 70),
+            onPressed: () {},
+          ),
+        ),
+      ),
     );
   }
 }
