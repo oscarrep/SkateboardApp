@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 
 
 
@@ -7,6 +8,29 @@ class BoardPage extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Scaffold(
+      /*floatingActionButton: SpeedDial(
+        marginRight: MediaQuery.of(context).size.width*0.05,
+        marginBottom: MediaQuery.of(context).size.height*0.8,
+        animatedIcon: AnimatedIcons.menu_arrow,
+        animatedIconTheme: IconThemeData(size: 22),
+        closeManually: false,
+        curve: Curves.bounceIn,
+        overlayColor: Colors.black,
+        overlayOpacity: 0.1,
+        onOpen: ()=> print('opening'),
+        onClose: ()=> print('closing'),
+        backgroundColor: Colors.white,
+        foregroundColor: Theme.of(context).primaryColor,
+        elevation: 10,
+        children: [
+          SpeedDialChild(
+            child: Icon(Icons.close),
+            foregroundColor: Colors.white,
+            backgroundColor: Theme.of(context).primaryColor,
+            onTap:(){},
+          )
+        ],
+      ),*/
       body: Stack(
         children:[
           Image.asset('assets/photojump.jpg',
@@ -67,10 +91,10 @@ class _Text extends StatelessWidget {
     return Align(
     alignment: Alignment.bottomCenter,
       child: Container(
-          height: MediaQuery.of(context).size.height * 0.28,
           decoration: BoxDecoration(
             color: Colors.white,
           ),
+          height: MediaQuery.of(context).size.height * 0.28,
          child: Padding(
            padding: EdgeInsets.all(30),
            child: Column(
@@ -105,6 +129,7 @@ class _Tag1 extends StatelessWidget {
           height: MediaQuery.of(context).size.height * 0.04,
           child: FloatingActionButton.extended(
             backgroundColor: Theme.of(context).primaryColor,
+            elevation: 0,
             label: Text('Photo',
                     style: TextStyle(
                       color: Colors.white,
@@ -132,6 +157,7 @@ class _Tag2 extends StatelessWidget {
           height: MediaQuery.of(context).size.height * 0.04,
           child: FloatingActionButton.extended(
             backgroundColor: Theme.of(context).primaryColor,
+            elevation: 0,
             label: Text('Skate',
                     style: TextStyle(
                       color: Colors.white,
@@ -159,6 +185,7 @@ class _Tag3 extends StatelessWidget {
           height: MediaQuery.of(context).size.height * 0.04,
           child: FloatingActionButton.extended(
             backgroundColor: Theme.of(context).primaryColor,
+            elevation: 0,
             label: Text('Longboard',
                     style: TextStyle(
                       color: Colors.white,
@@ -209,7 +236,6 @@ class _BotButtons extends StatelessWidget {
     return Align(
     alignment: Alignment.bottomCenter,
       child: Container(
-          height: MediaQuery.of(context).size.height * 0.07,
           decoration: BoxDecoration(
             color:Theme.of(context).primaryColor,
             borderRadius: BorderRadius.only(
@@ -217,10 +243,9 @@ class _BotButtons extends StatelessWidget {
             topRight: Radius.circular(30),
             ),
          ),
+         height: MediaQuery.of(context).size.height * 0.07,
         ),
-
     );
-  
   }
 }
 
@@ -240,6 +265,7 @@ class _Like extends StatelessWidget {
           height: 30,
           child: FloatingActionButton(
             mini: true,
+            elevation: 2,
             backgroundColor: Theme.of(context).primaryColor,
             child: Icon(Icons.favorite_rounded,
                 color: Colors.white, size: 20),
