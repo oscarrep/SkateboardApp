@@ -64,8 +64,8 @@ class _Username extends StatelessWidget {
     return Container(
     alignment: Alignment(-0.8 , 1.05),
       child: Container(
-          height: MediaQuery.of(context).size.height * 0.29,
-         child: Padding(
+        height: MediaQuery.of(context).size.height * 0.29,
+        child: Padding(
            padding: EdgeInsets.all(30),
            child: Column(
              children: [
@@ -99,7 +99,7 @@ class _Text extends StatelessWidget {
          child: Padding(
            padding: EdgeInsets.all(30),
            child: Column(
-             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+             mainAxisAlignment: MainAxisAlignment.center,
              children: [
                Text(
                     'Hey guys, this is one of the photos we took '
@@ -125,7 +125,6 @@ class _Tag1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Container(
         alignment: Alignment(0.76,0.83),
         child: Container(
           width: MediaQuery.of(context).size.width * 0.1,
@@ -144,7 +143,6 @@ class _Tag1 extends StatelessWidget {
             onPressed: (){},
           ),
         ),
-      ),
     );
   }
 }
@@ -154,7 +152,6 @@ class _Tag2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Container(
         alignment: Alignment(0.50,0.83),
         child: Container(
           width: MediaQuery.of(context).size.width * 0.1,
@@ -173,7 +170,6 @@ class _Tag2 extends StatelessWidget {
             onPressed: (){},
           ),
         ),
-      ),
     );
   }
 }
@@ -183,7 +179,6 @@ class _Tag3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Container(
         alignment: Alignment(0.20,0.83),
         child: Container(
           width: MediaQuery.of(context).size.width * 0.15,
@@ -202,7 +197,6 @@ class _Tag3 extends StatelessWidget {
             onPressed: (){},
           ),
         ),
-      ),
     );
   }
 }
@@ -216,8 +210,7 @@ class _ProfilePic extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Container(
-        alignment: Alignment(-0.75 ,0.45),
+      alignment: Alignment(-0.75 ,0.45),
         child: Container(
           width: 70,
           height: 70,
@@ -231,7 +224,6 @@ class _ProfilePic extends StatelessWidget {
             onPressed: () {},
           ),
         ),
-      ),
     );
   }
 }
@@ -265,8 +257,7 @@ class _Like extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Container(
-        alignment: Alignment(0.75 , 0.56),
+      alignment: Alignment(0.75 , 0.56),
         child: Container(
           width: 30,
           height: 30,
@@ -281,7 +272,6 @@ class _Like extends StatelessWidget {
             onPressed: (){},
           ),
         ),
-      ),
     );
   }
 }
@@ -295,7 +285,6 @@ class _Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Container(
         alignment: Alignment(-0.75 , 0.98),
         child: Container(
           width: 30,
@@ -311,7 +300,6 @@ class _Home extends StatelessWidget {
             onPressed: (){},
           ),
         ),
-      ),
     );
   }
 }
@@ -325,8 +313,7 @@ class _Search extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Container(
-        alignment: Alignment(-0.25 , 0.98),
+        alignment: Alignment(-0.25 , 0.98),        
         child: Container(
           width: 30,
           height: 30,
@@ -341,7 +328,6 @@ class _Search extends StatelessWidget {
             onPressed: (){},
           ),
         ),
-      ),
     );
   }
 }
@@ -355,7 +341,6 @@ class _Photo extends StatelessWidget {
  @override
   Widget build(BuildContext context) {
     return Container(
-      child: Container(
         alignment: Alignment(0.25 , 0.98),
         child: Container(
           width: 30,
@@ -371,7 +356,6 @@ class _Photo extends StatelessWidget {
             onPressed: (){},
           ),
         ),
-      ),
     );
   }
 }
@@ -385,7 +369,6 @@ class _Messages extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Container(
         alignment: Alignment(0.75 , 0.98),
         child: Container(
           width: 30,
@@ -401,7 +384,6 @@ class _Messages extends StatelessWidget {
             onPressed: (){},
           ),
         ),
-      ),
     );
   }
 }
@@ -415,7 +397,6 @@ class _Back extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Container(
         alignment: Alignment(-0.9 , -0.85),
         child: Container(
           width: 30,
@@ -431,7 +412,6 @@ class _Back extends StatelessWidget {
             onPressed: (){},
           ),
         ),
-      ),
     );
   }
 }
@@ -445,7 +425,6 @@ class _Options extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Container(
         alignment: Alignment(0.9 , -0.85),
         child: Container(
           width: 30,
@@ -461,7 +440,6 @@ class _Options extends StatelessWidget {
             onPressed: (){},
           ),
         ),
-      ),
     );
   }
 }
