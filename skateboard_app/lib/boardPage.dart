@@ -24,6 +24,8 @@ class BoardPage extends StatelessWidget{
           _Search(),
           _Photo(),
           _Messages(),
+          _Back(),
+          _Options(),
         ], // children
       ),
     );
@@ -250,6 +252,62 @@ class _Messages extends StatelessWidget {
             backgroundColor: Colors.white,
             mini: true,
             child: Icon(Icons.chat_bubble_rounded,
+                color: Theme.of(context).primaryColor, size: 20),
+            onPressed: (){},
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _Back extends StatelessWidget {
+  const _Back({
+    Key key,
+  }):super(key: key);
+  @override
+
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(40.0),
+      child: Container(
+        alignment: Alignment(-1.2 , -1),
+        child: Container(
+          //alignment: Alignment.centerRight,
+          width: 30,
+          height: 30,
+          child: FloatingActionButton(
+            backgroundColor: Colors.white,
+            mini: true,
+            child: Icon(Icons.arrow_back,
+                color: Theme.of(context).primaryColor, size: 20),
+            onPressed: (){},
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _Options extends StatelessWidget {
+  const _Options({
+    Key key,
+  }):super(key: key);
+  @override
+
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(40.0),
+      child: Container(
+        alignment: Alignment(1.2 , -1),
+        child: Container(
+          //alignment: Alignment.centerRight,
+          width: 30,
+          height: 30,
+          child: FloatingActionButton(
+            backgroundColor: Colors.white,
+            mini: true,
+            child: Icon(Icons.menu,
                 color: Theme.of(context).primaryColor, size: 20),
             onPressed: (){},
           ),
