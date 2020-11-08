@@ -13,6 +13,7 @@ class BoardPage extends StatelessWidget{
           fit: BoxFit.fitHeight
           ),
           _Text(), 
+          _Tags(),
           _Username(),
           _BotButtons(),
           _Like(),
@@ -78,7 +79,7 @@ class _Text extends StatelessWidget {
                     'we had a blast. Looking forward to doing more things like this',
                     style: TextStyle(
                       color: Colors.blueGrey,
-                      fontSize: 13,
+                      fontSize: 11,
                     ),
                   )
              ], // Children
@@ -88,6 +89,38 @@ class _Text extends StatelessWidget {
     );
   }
 }
+
+class _Tags extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Align(
+    alignment: Alignment.center,
+      child: Container(
+          height: MediaQuery.of(context).size.height * 0.04,
+          //width: 30,
+          decoration: BoxDecoration(
+            color:Theme.of(context).primaryColor,
+            borderRadius: BorderRadius.all(Radius.circular(20)),
+            ),
+          child: Padding(
+           padding: EdgeInsets.all(5),
+           child: Column(
+             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+             children: [
+               Text('Photo',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 10,
+                    ),
+                  )
+             ], // Children
+           )
+         ),
+          ),
+    );
+  }
+} 
 
 class _ProfilePic extends StatelessWidget {
 
@@ -269,7 +302,7 @@ class _Messages extends StatelessWidget {
           child: FloatingActionButton(
             mini: true,
             backgroundColor: Colors.white,
-            child: Icon(Icons.chat_bubble_rounded,
+            child: Icon(Icons.comment,
                 color: Theme.of(context).primaryColor, size: 20),
             onPressed: (){},
           ),
