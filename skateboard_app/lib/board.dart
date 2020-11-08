@@ -19,7 +19,7 @@ this.price
 }
 
 final board = Board(
-  'assets/skate.png',
+  'assets/crop.jpg',
   'Rip Curl Skateboard',
   'Wooden longboard in Best quality for '
     'skateboard lovers we have wide range '
