@@ -13,7 +13,9 @@ class BoardPage extends StatelessWidget{
           fit: BoxFit.fitHeight
           ),
           _Text(), 
-          _Tags(),
+          _Tag1(),
+          _Tag2(),
+          _Tag3(),
           _Username(),
           _BotButtons(),
           _Like(),
@@ -90,37 +92,86 @@ class _Text extends StatelessWidget {
   }
 }
 
-class _Tags extends StatelessWidget {
+class _Tag1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Align(
-    alignment: Alignment.center,
+    return Container(
       child: Container(
+        alignment: Alignment(0.76,0.83),
+        child: Container(
+          width: 35,
           height: MediaQuery.of(context).size.height * 0.04,
-          //width: 30,
-          decoration: BoxDecoration(
-            color:Theme.of(context).primaryColor,
-            borderRadius: BorderRadius.all(Radius.circular(20)),
-            ),
-          child: Padding(
-           padding: EdgeInsets.all(5),
-           child: Column(
-             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-             children: [
-               Text('Photo',
+          child: FloatingActionButton.extended(
+            backgroundColor: Theme.of(context).primaryColor,
+            label: Text('Photo',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 10,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 8,
                     ),
-                  )
-             ], // Children
-           )
-         ),
+                  ),
+            onPressed: (){},
           ),
+        ),
+      ),
     );
   }
-} 
+}
+
+class _Tag2 extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Container(
+        alignment: Alignment(0.50,0.83),
+        child: Container(
+          width: 35,
+          height: MediaQuery.of(context).size.height * 0.04,
+          child: FloatingActionButton.extended(
+            backgroundColor: Theme.of(context).primaryColor,
+            label: Text('Skate',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 8,
+                    ),
+                  ),
+            onPressed: (){},
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _Tag3 extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Container(
+        alignment: Alignment(0.20,0.83),
+        child: Container(
+          width: 60,
+          height: MediaQuery.of(context).size.height * 0.04,
+          child: FloatingActionButton.extended(
+            backgroundColor: Theme.of(context).primaryColor,
+            label: Text('Longboard',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 8,
+                    ),
+                  ),
+            onPressed: (){},
+          ),
+        ),
+      ),
+    );
+  }
+}
 
 class _ProfilePic extends StatelessWidget {
 
@@ -164,14 +215,9 @@ class _BotButtons extends StatelessWidget {
             topLeft: Radius.circular(30),
             topRight: Radius.circular(30),
             ),
-          ),
-         child: Padding(
-           padding: EdgeInsets.all(30),
-           child: Row(
-            
          ),
         ),
-    )
+
     );
   
   }
@@ -187,7 +233,7 @@ class _Like extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Container(
-        alignment: Alignment(0.75 , 0.55),
+        alignment: Alignment(0.75 , 0.56),
         child: Container(
           width: 30,
           height: 30,
