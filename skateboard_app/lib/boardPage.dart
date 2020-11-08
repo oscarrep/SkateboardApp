@@ -16,8 +16,14 @@ class BoardPage extends StatelessWidget{
           fit: BoxFit.fitHeight
           ),
           _Text(),
-          _ProfilePic(),
+          //_Username(),
+          _BotButtons(),
           _Like(),
+          _ProfilePic(),
+          _Home(),
+          _Search(),
+          _Photo(),
+          _Messages(),
         ], // children
       ),
     );
@@ -54,6 +60,34 @@ class _Text extends StatelessWidget {
          ),
         ),
     );
+  }
+}
+
+
+class _BotButtons extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Align(
+    alignment: Alignment.bottomCenter,
+      child: Container(
+          height: MediaQuery.of(context).size.height*0.07,
+          decoration: BoxDecoration(
+            color:Theme.of(context).primaryColor,
+            borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(30),
+            topRight: Radius.circular(30),
+            ),
+          ),
+         child: Padding(
+           padding: EdgeInsets.all(30),
+           child: Row(
+            
+         ),
+        ),
+    )
+    );
+  
   }
 }
 
@@ -105,7 +139,119 @@ class _Like extends StatelessWidget {
             mini: true,
             child: Icon(Icons.favorite_border_rounded,
                 color: Theme.of(context).primaryColor, size: 20),
-            onPressed: () {},
+            onPressed: (){},
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _Home extends StatelessWidget {
+  const _Home({
+    Key key,
+  }):super(key: key);
+  @override
+
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(40.0),
+      child: Container(
+        alignment: Alignment(-1 , 1.14),
+        child: Container(
+          //alignment: Alignment.centerRight,
+          width: 30,
+          height: 30,
+          child: FloatingActionButton(
+            backgroundColor: Colors.white,
+            mini: true,
+            child: Icon(Icons.home,
+                color: Theme.of(context).primaryColor, size: 20),
+            onPressed: (){},
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _Search extends StatelessWidget {
+  const _Search({
+    Key key,
+  }):super(key: key);
+  @override
+
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(40.0),
+      child: Container(
+        alignment: Alignment(-0.40 , 1.14),
+        child: Container(
+          //alignment: Alignment.centerRight,
+          width: 30,
+          height: 30,
+          child: FloatingActionButton(
+            backgroundColor: Colors.white,
+            mini: true,
+            child: Icon(Icons.search,
+                color: Theme.of(context).primaryColor, size: 20),
+            onPressed: (){},
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _Photo extends StatelessWidget {
+  const _Photo({
+    Key key,
+  }):super(key: key);
+  @override
+
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(40.0),
+      child: Container(
+        alignment: Alignment(0.40 , 1.14),
+        child: Container(
+          //alignment: Alignment.centerRight,
+          width: 30,
+          height: 30,
+          child: FloatingActionButton(
+            backgroundColor: Colors.white,
+            mini: true,
+            child: Icon(Icons.camera_alt,
+                color: Theme.of(context).primaryColor, size: 20),
+            onPressed: (){},
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _Messages extends StatelessWidget {
+  const _Messages({
+    Key key,
+  }):super(key: key);
+  @override
+
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(40.0),
+      child: Container(
+        alignment: Alignment(1 , 1.14),
+        child: Container(
+          //alignment: Alignment.centerRight,
+          width: 30,
+          height: 30,
+          child: FloatingActionButton(
+            backgroundColor: Colors.white,
+            mini: true,
+            child: Icon(Icons.chat_bubble_rounded,
+                color: Theme.of(context).primaryColor, size: 20),
+            onPressed: (){},
           ),
         ),
       ),
