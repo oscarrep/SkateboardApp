@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ThemeData purple color
 
 MaterialColor customPurple = MaterialColor(
     _customPurplePrimaryValue,

@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:skateboard_app/app.dart';
-import 'package:skateboard_app/board.dart';
-//import 'package:skateboard_app/customs.dart';
 
 class BoardPage extends StatelessWidget{
   @override
@@ -11,12 +7,10 @@ class BoardPage extends StatelessWidget{
       body: Stack(
         children:[
           Image.asset('assets/photojump.jpg',
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
           fit: BoxFit.fitHeight
           ),
-          _Text(),
-          //_Username(),
+          _Text(), 
+          _Username(),
           _BotButtons(),
           _Like(),
           _ProfilePic(),
@@ -32,7 +26,33 @@ class BoardPage extends StatelessWidget{
   }
 }
 
-// --------------------------------------------------------------- HEADER -------------------------------
+class _Username extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+    alignment: Alignment(-0.85 , 1.05),
+      child: Container(
+          height: MediaQuery.of(context).size.height*2/7,
+         child: Padding(
+           padding: EdgeInsets.all(30),
+           child: Column(
+
+             children: [
+               Text('@itMe',
+                    style: TextStyle(
+                      color: Colors.blueGrey,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 13,
+                    ),
+                  )
+             ], // Children
+           )
+         ),
+      ),
+    );
+  }
+}
 
 class _Text extends StatelessWidget {
 
@@ -48,10 +68,11 @@ class _Text extends StatelessWidget {
          child: Padding(
            padding: EdgeInsets.all(30),
            child: Column(
-             mainAxisAlignment: MainAxisAlignment.spaceAround,
+             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
              children: [
                Text('Hey guys, this is one of the photos we took '
-                    'on the last trip with the Rip Curl team',
+                    'on the last trip with the Rip Curl team, '
+                    'we had a blast. Looking forward to doing more things like this',
                     style: TextStyle(
                       color: Colors.blueGrey,
                       fontSize: 13,
@@ -60,11 +81,37 @@ class _Text extends StatelessWidget {
              ], // Children
            )
          ),
-        ),
+      ),
     );
   }
 }
 
+class _ProfilePic extends StatelessWidget {
+  const _ProfilePic({
+    Key key,
+  }):super(key: key);
+  @override
+
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(40.0),
+      child: Container(
+        alignment: Alignment(-1 ,0.55),
+        child: Container(
+          width: 70,
+          height: 70,
+          child: FloatingActionButton(
+            backgroundColor: Colors.white,
+            mini: true,
+            child: Icon(Icons.account_circle,
+                color: Theme.of(context).primaryColor, size: 70),
+            onPressed: () {},
+          ),
+        ),
+      ),
+    );
+  }
+}
 
 class _BotButtons extends StatelessWidget {
 
@@ -93,34 +140,6 @@ class _BotButtons extends StatelessWidget {
   }
 }
 
-class _ProfilePic extends StatelessWidget {
-  const _ProfilePic({
-    Key key,
-  }):super(key: key);
-  @override
-
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(40.0),
-      child: Container(
-        alignment: Alignment(-1 ,0.6),
-        child: Container(
-          //alignment: Alignment.centerRight,
-          width: 70,
-          height: 70,
-          child: FloatingActionButton(
-            backgroundColor: Colors.white,
-            mini: true,
-            child: Icon(Icons.account_circle,
-                color: Theme.of(context).primaryColor, size: 70),
-            onPressed: () {},
-          ),
-        ),
-      ),
-    );
-  }
-}
-
 class _Like extends StatelessWidget {
   const _Like({
     Key key,
@@ -133,7 +152,6 @@ class _Like extends StatelessWidget {
       child: Container(
         alignment: Alignment(1 , 0.65),
         child: Container(
-          //alignment: Alignment.centerRight,
           width: 30,
           height: 30,
           child: FloatingActionButton(
@@ -161,7 +179,6 @@ class _Home extends StatelessWidget {
       child: Container(
         alignment: Alignment(-1 , 1.14),
         child: Container(
-          //alignment: Alignment.centerRight,
           width: 30,
           height: 30,
           child: FloatingActionButton(
@@ -189,7 +206,6 @@ class _Search extends StatelessWidget {
       child: Container(
         alignment: Alignment(-0.40 , 1.14),
         child: Container(
-          //alignment: Alignment.centerRight,
           width: 30,
           height: 30,
           child: FloatingActionButton(
@@ -217,7 +233,6 @@ class _Photo extends StatelessWidget {
       child: Container(
         alignment: Alignment(0.40 , 1.14),
         child: Container(
-          //alignment: Alignment.centerRight,
           width: 30,
           height: 30,
           child: FloatingActionButton(
@@ -245,7 +260,6 @@ class _Messages extends StatelessWidget {
       child: Container(
         alignment: Alignment(1 , 1.14),
         child: Container(
-          //alignment: Alignment.centerRight,
           width: 30,
           height: 30,
           child: FloatingActionButton(
@@ -273,7 +287,6 @@ class _Back extends StatelessWidget {
       child: Container(
         alignment: Alignment(-1.2 , -1),
         child: Container(
-          //alignment: Alignment.centerRight,
           width: 30,
           height: 30,
           child: FloatingActionButton(
@@ -301,7 +314,6 @@ class _Options extends StatelessWidget {
       child: Container(
         alignment: Alignment(1.2 , -1),
         child: Container(
-          //alignment: Alignment.centerRight,
           width: 30,
           height: 30,
           child: FloatingActionButton(
@@ -316,171 +328,3 @@ class _Options extends StatelessWidget {
     );
   }
 }
-
-/*class BoardPage extends StatelessWidget {
-  final Board board;
-  BoardPage(this.board);
-
-  @override
-  Widget build(BuildContext context) {
-    final divider = Divider(
-      color: Color.fromARGB(255, 0, 0, 0),
-      thickness: 0,
-      height: 0,
-    );
-
-    return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          Expanded(flex: 6, child: _Header(board: board)),
-          divider,
-          Expanded(flex: 2, child: _Middle(board: board)),
-          divider,
-          Expanded(flex: 2, child: _Bottom(board)),
-        ],
-      ),
-    );
-  }
-}*/
-
-// --------------------------------------------------------------- HEADER -------------------------------
-
-/*class _Header extends StatelessWidget {
-  const _Header({
-    Key key,
-    @required this.board,
-  }) : super(key: key);
-
-  final Board board;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          AspectRatio(
-            aspectRatio: 2,
-            child: Image.asset(
-              board.boardPNG,
-            ),
-          ),
-          Expanded(
-          child: Center (
-              child: Text(
-                board.itemName,
-                style: TextStyle(
-                fontSize: 20,
-            ),
-          ),
-          ),
-          ),
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(
-                board.description,
-                style: TextStyle(
-                  fontSize: 13,
-                  color: Colors.grey,
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}*/
-
-// --------------------------------------------------------------- MIDDLE -------------------------------
-
-/*class _Middle extends StatelessWidget {
-  const _Middle({
-    Key key,
-    @required this.board,
-  }) : super(key: key);
-
-  final Board board;
-
-  Widget _text(String text) {
-    final TextStyle infoStyle = TextStyle(
-      fontSize: 12,
-      color: Colors.grey,
-    );
-    return Text(text, style: infoStyle);
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: <Widget>[
-          Expanded(
-          child: Padding (
-            padding: EdgeInsets.fromLTRB(0,5,200,0),
-              child: Text(
-                board.sold,
-                style: TextStyle(
-                fontSize: 15,
-                color: Colors.red,
-            ),
-          ),
-          ),
-          ),
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(
-                board.description,
-                style: TextStyle(
-                  fontSize: 13,
-                  color: Colors.grey,
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}*/
-
-// --------------------------------------------------------------- BOTTOM -------------------------------
-
-/*class _Bottom extends StatelessWidget {
-  final Board board;
-  _Bottom(this.board);
-
-  _BottomRow(String label, String content) => TableRow(
-        children: [
-          Text(label),
-          SizedBox(width: 16),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 16.0),
-            child: Text(content),
-          ),
-        ],
-      );
-
-  @override
-  Widget build(BuildContext context) {
-    return Scrollbar(
-      child: ListView(
-        children: [
-          Container(
-            padding: EdgeInsets.all(20),
-            child: Table(
-              columnWidths: {
-                0: IntrinsicColumnWidth(),
-                1: IntrinsicColumnWidth(),
-              },
-              
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}*/
